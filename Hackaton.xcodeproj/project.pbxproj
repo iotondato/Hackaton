@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E427C5E919EF4AFB000E86BD /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E427C5E819EF4AFB000E86BD /* main.cpp */; };
+		E427C5F019EF4B65000E86BD /* url_to_str.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E427C5EF19EF4B65000E86BD /* url_to_str.cpp */; };
+		E427C5F219EF4B91000E86BD /* jsonxx.cc in Sources */ = {isa = PBXBuildFile; fileRef = E427C5F119EF4B91000E86BD /* jsonxx.cc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +25,8 @@
 
 /* Begin PBXFileReference section */
 		E427C5E519EF4AFB000E86BD /* Hackaton */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Hackaton; sourceTree = BUILT_PRODUCTS_DIR; };
-		E427C5E819EF4AFB000E86BD /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		E427C5EF19EF4B65000E86BD /* url_to_str.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = url_to_str.cpp; sourceTree = "<group>"; };
+		E427C5F119EF4B91000E86BD /* jsonxx.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = jsonxx.cc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +59,8 @@
 		E427C5E719EF4AFB000E86BD /* Hackaton */ = {
 			isa = PBXGroup;
 			children = (
-				E427C5E819EF4AFB000E86BD /* main.cpp */,
+				E427C5F119EF4B91000E86BD /* jsonxx.cc */,
+				E427C5EF19EF4B65000E86BD /* url_to_str.cpp */,
 			);
 			path = Hackaton;
 			sourceTree = "<group>";
@@ -118,7 +121,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E427C5E919EF4AFB000E86BD /* main.cpp in Sources */,
+				E427C5F219EF4B91000E86BD /* jsonxx.cc in Sources */,
+				E427C5F019EF4B65000E86BD /* url_to_str.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,9 +162,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					.,
+				);
+				LIBRARY_SEARCH_PATHS = "/Users/brennotondatodefaria/Desktop/FEI/2º_Ciclo/hackaton/Hackaton_ABD/bibliotecas/curl-7.38.0/lib";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-lcurl";
+				OTHER_LIBTOOLFLAGS = "";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -193,8 +205,16 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					.,
+				);
+				LIBRARY_SEARCH_PATHS = "/Users/brennotondatodefaria/Desktop/FEI/2º_Ciclo/hackaton/Hackaton_ABD/bibliotecas/curl-7.38.0/lib";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-lcurl";
+				OTHER_LIBTOOLFLAGS = "";
 				SDKROOT = macosx;
 			};
 			name = Release;
